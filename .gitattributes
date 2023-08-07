@@ -7,4 +7,4 @@
 *.xls binary
 *.pdf binary
 *.parquet binary
-*.gkpg binary
+*.gpkg binary
