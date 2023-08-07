@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "template_data_repo"
+name = "2025_constituencies"
 version = "0.1.0"
-description = "Standardised template for mysociety data repositories"
+description = "Conversion and lookup files for 2025 UK Parliamentary constituencies"
 authors = []
 
 [tool.poetry.dependencies]
@@ -12,7 +12,7 @@ data_common = { path = "src/data_common/", develop = true }
 pytest = "^7.1.1"
 
 [tool.poetry.scripts]
-project = 'template_data_repo.__main__:main'
+project = '2025_constituencies.__main__:main'
 notebook = "data_common.notebookcli.__main__:run"
 dataset = "data_common.dataset.__main__:run"
 
@@ -29,6 +29,6 @@ default_page_title = "Settings file defined title"
 [tool.dataset]
 dataset_dir = "data/packages"
 publish_dir = "docs/"
-publish_url = "https://pages.mysociety.org/template_data_repo/"
+publish_url = "https://pages.mysociety.org/2025_constituencies/"
 credit_text = "If you find this data useful, please let us know to help us make the case for future funding."
 credit_url = "https://survey.alchemer.com/s3/6876792/Data-usage"

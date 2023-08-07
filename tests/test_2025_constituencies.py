@@ -1,4 +1,4 @@
-import template_data_repo
+import 2025_constituencies
 
 import pytest
 

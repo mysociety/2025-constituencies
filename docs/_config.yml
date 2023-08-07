@@ -1,8 +1,8 @@
 theme: jekyll-theme-slate
-title: template_data_repo
-description: Standardised template for mysociety data repositories
+title: 2025-constituencies
+description: Conversion and lookup files for 2025 UK Parliamentary constituencies
 
-baseurl: "/template_data_repo"
+baseurl: "/2025-constituencies"
 url: "https://pages.mysociety.org"
 
 collections:

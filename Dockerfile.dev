@@ -1,10 +1,10 @@
-FROM ghcr.io/mysociety/data_common:latest
+FROM ghcr.io/mysociety/data_common:sha-2d20c80
 
 # Make an empty project directory so the 'self' setup doesn't fail and scripts can be setup
 # Override the .pth created at previous stages to point to where the working directory will land
 COPY pyproject.toml poetry.loc[k] /setup/ 
 COPY src/data_common/pyproject.toml src/data_common/poetry.loc[k] /setup/src/data_common/
-ENV WORKSPACE_NAME template_data_repo
+ENV WORKSPACE_NAME 2025_constituencies
 RUN mkdir /setup/src/$WORKSPACE_NAME \
     && touch /setup/src/$WORKSPACE_NAME/__init__.py \
     && mkdir --parents /setup/src/data_common/src/data_common \
