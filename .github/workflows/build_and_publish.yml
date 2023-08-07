@@ -30,6 +30,7 @@ jobs:
         with:
           run: |
             export PATH="/root/.local/bin:$PATH"
+            poetry install
             script/test
             dataset build --all
             dataset version auto --auto-ban major --all --publish
