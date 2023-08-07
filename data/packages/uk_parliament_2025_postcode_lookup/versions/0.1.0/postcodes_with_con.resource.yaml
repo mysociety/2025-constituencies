@@ -1,0 +1,27 @@
+title: Postcode lookup
+description: "Lookup from GB postcodes to new Parliamentary constituency.\nBased on\
+  \ OS Code Point Open - NI postcodes not included because of licencing.\n"
+custom:
+  row_count: 1734274
+path: postcodes_with_con.parquet
+name: postcodes_with_con
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: postcode
+    type: string
+    description: GB Postcode
+    constraints:
+      unique: true
+    example: AB10 1AB
+  - name: short_code
+    type: string
+    description: short_code as used in Parliament lookup table
+    constraints:
+      unique: false
+    example: UKPARL.2025.AAD
+hash: 77fc503c83b6b27ccc37b835c2d3932d

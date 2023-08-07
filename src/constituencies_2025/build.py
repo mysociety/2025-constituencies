@@ -8,4 +8,9 @@ while not (top_level / "pyproject.toml").exists():
 
 def build_2025_constituencies_geodata():
     notebook_path = top_level / "notebooks" / "geo_combine.ipynb"
-    run_notebook(notebook_path)
+    run_notebook(notebook_path, save=False)
+
+
+def build_postcode_lookup():
+    notebook_path = top_level / "notebooks" / "create_postcode_lookup.ipynb"
+    run_notebook(notebook_path, save=False)
