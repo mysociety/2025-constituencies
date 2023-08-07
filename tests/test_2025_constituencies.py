@@ -1,4 +1,4 @@
-import 2025_constituencies
+import constituencies_2025
 
 import pytest
 

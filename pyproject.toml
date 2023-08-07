@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "2025_constituencies"
+name = "constituencies_2025"
 version = "0.1.0"
 description = "Conversion and lookup files for 2025 UK Parliamentary constituencies"
 authors = []
@@ -12,7 +12,7 @@ data_common = { path = "src/data_common/", develop = true }
 pytest = "^7.1.1"
 
 [tool.poetry.scripts]
-project = '2025_constituencies.__main__:main'
+project = 'constituencies_2025.__main__:main'
 notebook = "data_common.notebookcli.__main__:run"
 dataset = "data_common.dataset.__main__:run"
 
