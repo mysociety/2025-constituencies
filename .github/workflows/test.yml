@@ -1,0 +1,31 @@
+name: Run project tests
+
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}-tests
+  cancel-in-progress: true
+  
+on:
+  push:
+    branches-ignore: ["main"]
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout repo content
+        uses: actions/checkout@v3
+        with:
+          submodules: 'recursive'
+
+      - name: Run project tests
+        uses: mysociety/run-in-devcontainer@v1
+        with:
+          run: |
+            export PATH="/root/.local/bin:$PATH"
+            script/test
+            dataset build --all
+            dataset version auto --auto-ban major --all

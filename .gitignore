@@ -5,3 +5,6 @@ data/private/*
 _render/_parts
 _render/_papermills
 docs/_site
+data/raw/geo
+docs/data
+docs/_*

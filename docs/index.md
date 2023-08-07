@@ -1,8 +1,4 @@
 ---
-title: "Download 2025_constituencies"
+title: "Download UK Parliament 2025 Constituency data"
 layout: datasets/front
 ---
-
-# Dataset download site title
-
-Here is some text underneath that.
