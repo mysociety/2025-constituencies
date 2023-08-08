@@ -1,0 +1,71 @@
+name: parliament_con_2025
+title: Parliament Constituencies 2025
+description: "Lookup table and geodata for (currently future) 2025 constituencies.\n\
+  This merges the geodata from the four boundary commissions and adds a consistent\
+  \ set of headings.\nIn advance of a complete ONS ID, we use a unique identifer based\
+  \ on Rae and Brown's 3 letter codes (http://www.statsmapsnpix.com/2023/07/a-new-uk-constituency-hex-map.html).\n"
+version: 0.1.1
+licenses:
+- name: CC-BY-4.0
+  path: https://creativecommons.org/licenses/by/4.0/
+  title: Creative Commons Attribution 4.0 International License
+contributors:
+- title: mySociety
+  path: https://mysociety.org
+  role: author
+- title: Boundary Commission for Scotland
+  path: https://www.bcomm-scotland.independent.gov.uk/
+  role: contributor
+- title: Boundary Commission for England
+  path: https://boundarycommissionforengland.independent.gov.uk/
+  role: contributor
+- title: Boundary Commission for Wales
+  path: https://bcomm-wales.gov.uk/
+  role: contributor
+- title: Boundary Commission for Northern Ireland
+  path: https://www.boundarycommission.org.uk/
+  role: contributor
+- title: Philip Brown and Alasdair Rae, Automatic Knowledge Ltd
+  path: http://www.statsmapsnpix.com/2023/07/a-new-uk-constituency-hex-map.html
+  role: contributor
+custom:
+  build: constituencies_2025.build:build_2025_constituencies_geodata
+  tests:
+  - test_constituencies_2025
+  dataset_order: 0
+  download_options:
+    gate: default
+    survey: default
+    header_text: default
+  formats:
+    csv: true
+    parquet: true
+    gpkg: true
+    geojson: true
+  is_geodata: true
+  composite:
+    xlsx:
+      include: all
+      exclude: none
+      render: true
+    sqlite:
+      include: all
+      exclude: none
+      render: false
+    json:
+      include: all
+      exclude: none
+      render: false
+  change_log:
+    0.1.0: ''
+    0.1.1: "contributors changed from '[{'title': 'mySociety', 'path': 'https://mysociety.org',\
+      \ 'role': 'author'}]' to '[{'title': 'mySociety', 'path': 'https://mysociety.org',\
+      \ 'role': 'author'}, {'title': 'Boundary Commission for Scotland', 'path': 'https://www.bcomm-scotland.independent.gov.uk/',\
+      \ 'role': 'contributor'}, {'title': 'Boundary Commission for England', 'path':\
+      \ 'https://boundarycommissionforengland.independent.gov.uk/', 'role': 'contributor'},\
+      \ {'title': 'Boundary Commission for Wales', 'path': 'https://bcomm-wales.gov.uk/',\
+      \ 'role': 'contributor'}, {'title': 'Boundary Commission for Northern Ireland',\
+      \ 'path': 'https://www.boundarycommission.org.uk/', 'role': 'contributor'},\
+      \ {'title': 'Philip Brown and Alasdair Rae, Automatic Knowledge Ltd', 'path':\
+      \ 'http://www.statsmapsnpix.com/2023/07/a-new-uk-constituency-hex-map.html',\
+      \ 'role': 'contributor'}]'"
