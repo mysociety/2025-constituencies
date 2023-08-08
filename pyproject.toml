@@ -18,13 +18,10 @@ dataset = "data_common.dataset.__main__:run"
 
 [tool.pyright]
 include = ["src", "notebooks"]
-exclude=["src/data_common/typings"]
-stubPath="src/data_common/typings"
-typeCheckingMode="basic"
-reportPrivateImportUsage="warning"
-
-[notebook.settings]
-default_page_title = "Settings file defined title"
+exclude = ["src/data_common/typings"]
+stubPath = "src/data_common/typings"
+typeCheckingMode = "basic"
+reportPrivateImportUsage = "warning"
 
 [tool.dataset]
 dataset_dir = "data/packages"
@@ -32,3 +29,11 @@ publish_dir = "docs/"
 publish_url = "https://pages.mysociety.org/2025_constituencies/"
 credit_text = "If you find this data useful, please let us know to help us make the case for future funding."
 credit_url = "https://survey.alchemer.com/s3/6876792/Data-usage"
+
+[tool.ruff]
+exclude = []
+select = ["E", "F", "PTH"]
+ignore = ["E501"]
+
+[tool.notebook.settings]
+default_page_title = "Settings file defined title"

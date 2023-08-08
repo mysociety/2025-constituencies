@@ -8,15 +8,19 @@
 	],
 	"postCreateCommand": ".devcontainer/postCreateCommand",
 	"workspaceFolder": "/workspaces/2025_constituencies",
-	"extensions": [
-		"ms-vscode.test-adapter-converter",
-		"bungcip.better-toml",
-		"ms-python.python",
-		"ms-python.vscode-pylance",
-		"ms-azuretools.vscode-docker",
-		"valentjn.vscode-ltex"
-	],
 	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.test-adapter-converter",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-azuretools.vscode-docker",
+				"valentjn.vscode-ltex",
+				"tamasfe.even-better-toml",
+				"ms-python.black-formatter",
+				"charliermarsh.ruff"
+			],
+		},
 		"codespaces": {
 			"repositories": {
 				"mysociety/data_common": {
