@@ -2,7 +2,7 @@ name: uk_parliament_2025_postcode_lookup
 title: UK Parliament 2025 postcode lookup
 description: "Lookup from GB postcodes to new Parliamentary constituency.\nBased on\
   \ OS Code Point Open - NI postcodes not included because of licencing.\n"
-version: 0.1.0
+version: 0.1.1
 licenses:
 - name: CC-BY-4.0
   path: https://creativecommons.org/licenses/by/4.0/
@@ -29,14 +29,15 @@ custom:
     xlsx:
       include: all
       exclude: none
-      render: true
+      render: false
     sqlite:
       include: all
       exclude: none
-      render: true
+      render: false
     json:
       include: all
       exclude: none
       render: true
   change_log:
     0.1.0: ''
+    0.1.1: ''
