@@ -13,6 +13,22 @@ contributors:
 - title: mySociety
   path: https://mysociety.org
   role: author
+- title: Boundary Commission for Scotland
+  path: https://www.bcomm-scotland.independent.gov.uk/
+  role: contributor
+- title: Boundary Commission for England
+  path: https://boundarycommissionforengland.independent.gov.uk/
+  role: contributor
+- title: Boundary Commission for Wales
+  path: https://bcomm-wales.gov.uk/
+  role: contributor
+- title: Boundary Commission for Northern Ireland
+  path: https://www.boundarycommission.org.uk/
+  role: contributor
+- title: Philip Brown and Alasdair Rae, Automatic Knowledge Ltd
+  path: http://www.statsmapsnpix.com/2023/07/a-new-uk-constituency-hex-map.html
+  role: contributor
+
 custom:
   build: constituencies_2025.build:build_2025_constituencies_geodata
   tests:
