@@ -1,5 +1,6 @@
 title: PARL10 to PARL25 overlap
-description: Tables of area and population overlap between parl10 and parl25 geography types
+description: Tables of area and population overlap between parl10 and parl25 geography
+  types
 custom:
   row_count: 1306
 path: PARL10_PARL25_combo_overlap.parquet
@@ -31,9 +32,9 @@ schema:
     example: 0.01
   - name: pop_overlap
     type: number
-    description: |
-      Percentage overlap of population between polygon areas.
-      Based on distributing LSOA population amoung postcodes/NI datazones and reattributing to area intersections.
+    description: "Percentage overlap of population between polygon areas.\nBased on\
+      \ distributing LSOA population amoung postcodes/NI datazones and reattributing\
+      \ to area intersections.\n"
     constraints:
       unique: false
     example: 0.0
