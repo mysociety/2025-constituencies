@@ -19,7 +19,7 @@
 				"tamasfe.even-better-toml",
 				"ms-python.black-formatter",
 				"charliermarsh.ruff"
-			],
+			]
 		},
 		"codespaces": {
 			"repositories": {

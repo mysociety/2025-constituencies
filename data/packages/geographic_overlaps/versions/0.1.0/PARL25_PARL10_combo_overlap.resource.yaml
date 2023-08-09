@@ -1,0 +1,40 @@
+title: PARL25 to PARL10 overlap
+description: Tables of area and population overlap between parl25 and parl10 geography types
+custom:
+  row_count: 1294
+path: PARL25_PARL10_combo_overlap.parquet
+name: parl25_parl10_combo_overlap
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: PARL25
+    type: string
+    description: Shortcode for new 2025 constituencies
+    constraints:
+      unique: false
+    example: UKPARL.2025.AAD
+  - name: PARL10
+    type: string
+    description: 2010 constituencies
+    constraints:
+      unique: false
+    example: E14000530
+  - name: area_overlap
+    type: number
+    description: Percentage overlap of area between polygon areas
+    constraints:
+      unique: false
+    example: 0.01
+  - name: pop_overlap
+    type: number
+    description: |
+      Percentage overlap of population between polygon areas.
+      Based on distributing LSOA population amoung postcodes/NI datazones and reattributing to area intersections.
+    constraints:
+      unique: false
+    example: 0.0
+hash: d070b83d314a5b786f2963326ae7ca91
