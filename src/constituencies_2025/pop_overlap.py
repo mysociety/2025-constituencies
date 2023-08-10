@@ -97,7 +97,9 @@ def calculate_population_crossover(area_type_a: str, area_type_b: str) -> pd.Dat
         SELECT
             {{ area_type_a }},
             {{ area_type_b }},
-            pop_overlap/pcon_pop as percentage_overlap
+            pop_overlap/pcon_pop as percentage_overlap_pop,
+            pop_overlap as overlap_pop,
+            pcon_pop as original_pop
         FROM
             pop_overlap
         JOIN
@@ -105,6 +107,6 @@ def calculate_population_crossover(area_type_a: str, area_type_b: str) -> pd.Dat
         """
 
     df = duck.last_query.df()
-    df = df.sort_values("percentage_overlap")
+    df = df.sort_values("percentage_overlap_pop")
 
     return df

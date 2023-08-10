@@ -35,15 +35,6 @@ class Geography:
         return f"{self.code_col}_geo"
 
 
-def overlap(left_geo: str, right_geo: str):
-    def inner_overlap(row: pd.Series) -> float:
-        intersect = row[left_geo].intersection(row[right_geo])
-        percentage = intersect.area / row[left_geo].area
-        return percentage
-
-    return inner_overlap
-
-
 def calculate_percentage_overlap_between_two_geographies(
     left_geo: Geography,
     right_geo: Geography,
@@ -90,14 +81,19 @@ def calculate_percentage_overlap_between_two_geographies(
 
     print("calculating percentage overlap")
     # calculate the percentage overlap between two geographies based on area
-    df["percentage_overlap"] = df.apply(
-        overlap(left_geo.geo_column, right_geo.geo_column), axis="columns"
+
+    intersection = df.apply(
+        lambda row: row[left_geo.geo_column].intersection(row[right_geo.geo_column]),
+        axis=1,
     )
+    df["overlap_area"] = intersection.apply(lambda x: x.area)
+    df["original_area"] = df[left_geo.geo_column].apply(lambda x: x.area)
+    df["percentage_overlap_area"] = df["overlap_area"] / df["original_area"]
 
     print("finalising")
     df = (
-        df[df["percentage_overlap"] >= 0.01]
-        .sort_values("percentage_overlap")
+        df[df["percentage_overlap_area"] >= 0.01]
+        .sort_values("percentage_overlap_area")
         .drop(columns=[x for x in df.columns if x.endswith("_geo")])
     )
 

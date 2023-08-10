@@ -96,7 +96,7 @@ def combine_overlap(left_area: str, right_area: str):
             "area_overlap",
             f"{left_area}_{right_area}_area_overlap.parquet",
         )
-    ).rename(columns={"percentage_overlap": "area_overlap"})
+    )
     pop_df = pd.read_parquet(
         Path(
             "data",
@@ -104,7 +104,7 @@ def combine_overlap(left_area: str, right_area: str):
             "pop_overlap",
             f"{left_area}_{right_area}_pop_overlap.parquet",
         )
-    ).rename(columns={"percentage_overlap": "pop_overlap"})
+    )
 
     merge_cols = [left_area, right_area]
 
@@ -115,8 +115,10 @@ def combine_overlap(left_area: str, right_area: str):
     df = df.sort_values(by=[left_area, right_area])
 
     # reduce area_overlap, pop_overlap to 2 dp
-    df["area_overlap"] = df["area_overlap"].round(2)
-    df["pop_overlap"] = df["pop_overlap"].round(2)
+    all_generated_cols = df.columns[2:]
+
+    for col in all_generated_cols:
+        df[col] = df[col].round(2)
 
     final_filename = f"{left_area}_{right_area}_combo_overlap"
 
