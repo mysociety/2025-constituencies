@@ -1,0 +1,64 @@
+title: PARL25 to LAD23 overlap
+description: Tables of area and population overlap between parl25 and lad23 geography
+  types
+custom:
+  row_count: 946
+path: PARL25_LAD23_combo_overlap.parquet
+name: parl25_lad23_combo_overlap
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: PARL25
+    type: string
+    description: Shortcode for new 2025 constituencies
+    constraints:
+      unique: false
+    example: UKPARL.2025.AAD
+  - name: LAD23
+    type: string
+    description: 2023 local authorities
+    constraints:
+      unique: false
+    example: E06000001
+  - name: overlap_area
+    type: number
+    description: Area of overlap in m2
+    constraints:
+      unique: true
+    example: 591949.86
+  - name: original_area
+    type: number
+    description: Area of original geography in m2
+    constraints:
+      unique: false
+    example: 6815573.72
+  - name: percentage_overlap_area
+    type: number
+    description: Percentage of original area that overlaps with new geography
+    constraints:
+      unique: false
+    example: 0.01
+  - name: percentage_overlap_pop
+    type: number
+    description: Percentage of original population that overlaps with new geography
+    constraints:
+      unique: false
+    example: 0.0
+  - name: overlap_pop
+    type: number
+    description: Population of overlap
+    constraints:
+      unique: false
+    example: 0.0
+  - name: original_pop
+    type: number
+    description: Population of original geography (roughly, this is 2019 population
+      divided by postcode and recombined)
+    constraints:
+      unique: false
+    example: 0.0
+hash: 937ea25660e8158762cf51ad054b14c9

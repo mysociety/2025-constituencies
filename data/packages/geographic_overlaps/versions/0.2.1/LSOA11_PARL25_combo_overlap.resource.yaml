@@ -1,0 +1,64 @@
+title: LSOA11 to PARL25 overlap
+description: Tables of area and population overlap between lsoa11 and parl25 geography
+  types
+custom:
+  row_count: 44728
+path: LSOA11_PARL25_combo_overlap.parquet
+name: lsoa11_parl25_combo_overlap
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: LSOA11
+    type: string
+    description: 2011 LSOAS (and datazones, SOAs)
+    constraints:
+      unique: false
+    example: 95AA01S1
+  - name: PARL25
+    type: string
+    description: Shortcode for new 2025 constituencies
+    constraints:
+      unique: false
+    example: UKPARL.2025.AAD
+  - name: overlap_area
+    type: number
+    description: Area of overlap in m2
+    constraints:
+      unique: false
+    example: 273.73
+  - name: original_area
+    type: number
+    description: Area of original geography in m2
+    constraints:
+      unique: false
+    example: 9367.27
+  - name: percentage_overlap_area
+    type: number
+    description: Percentage of original area that overlaps with new geography
+    constraints:
+      unique: false
+    example: 0.01
+  - name: percentage_overlap_pop
+    type: number
+    description: Percentage of original population that overlaps with new geography
+    constraints:
+      unique: false
+    example: 0.0
+  - name: overlap_pop
+    type: number
+    description: Population of overlap
+    constraints:
+      unique: false
+    example: 0.0
+  - name: original_pop
+    type: number
+    description: Population of original geography (roughly, this is 2019 population
+      divided by postcode and recombined)
+    constraints:
+      unique: false
+    example: 0.0
+hash: cdd5954c9350ca0dcadec99f811e3400

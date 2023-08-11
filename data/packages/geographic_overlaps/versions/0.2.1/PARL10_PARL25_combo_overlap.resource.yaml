@@ -1,0 +1,64 @@
+title: PARL10 to PARL25 overlap
+description: Tables of area and population overlap between parl10 and parl25 geography
+  types
+custom:
+  row_count: 1306
+path: PARL10_PARL25_combo_overlap.parquet
+name: parl10_parl25_combo_overlap
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: PARL10
+    type: string
+    description: 2010 constituencies
+    constraints:
+      unique: false
+    example: E14000530
+  - name: PARL25
+    type: string
+    description: Shortcode for new 2025 constituencies
+    constraints:
+      unique: false
+    example: UKPARL.2025.AAD
+  - name: overlap_area
+    type: number
+    description: Area of overlap in m2
+    constraints:
+      unique: true
+    example: 131021.96
+  - name: original_area
+    type: number
+    description: Area of original geography in m2
+    constraints:
+      unique: false
+    example: 7383584.74
+  - name: percentage_overlap_area
+    type: number
+    description: Percentage of original area that overlaps with new geography
+    constraints:
+      unique: false
+    example: 0.01
+  - name: percentage_overlap_pop
+    type: number
+    description: Percentage of original population that overlaps with new geography
+    constraints:
+      unique: false
+    example: 0.0
+  - name: overlap_pop
+    type: number
+    description: Population of overlap
+    constraints:
+      unique: false
+    example: 0.0
+  - name: original_pop
+    type: number
+    description: Population of original geography (roughly, this is 2019 population
+      divided by postcode and recombined)
+    constraints:
+      unique: false
+    example: 0.0
+hash: d3a1065f37fc24691e3eac8256fe1dbc

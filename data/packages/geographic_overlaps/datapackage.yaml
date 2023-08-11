@@ -1,7 +1,11 @@
 name: geographic_overlaps
 title: Geographic overlaps
 description: "Tables of area and population overlap between geography types\n"
-version: 0.2.0
+version: 0.2.1
+keywords:
+- UK Local data
+- United Kingdom
+- UK
 licenses:
 - name: CC-BY-4.0
   path: https://creativecommons.org/licenses/by/4.0/
@@ -41,3 +45,4 @@ custom:
   change_log:
     0.1.0: ''
     0.2.0: 'New field(s) added to resource: overlap_area,original_area,percentage_overlap_area,percentage_overlap_pop,overlap_pop,original_pop'
+    0.2.1: keywords changed from 'None' to '['UK Local data', 'United Kingdom', 'UK']'

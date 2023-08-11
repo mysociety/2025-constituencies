@@ -1,0 +1,48 @@
+name: uk_parliament_2025_postcode_lookup
+title: UK Parliament 2025 postcode lookup
+description: "Lookup from GB postcodes to new Parliamentary constituency.\nBased on\
+  \ OS Code Point Open - NI postcodes not included because of licencing.\n"
+version: 0.1.2
+keywords:
+- UK Local data
+- United Kingdom
+- UK
+licenses:
+- name: CC-BY-4.0
+  path: https://creativecommons.org/licenses/by/4.0/
+  title: Creative Commons Attribution 4.0 International License
+contributors:
+- title: mySociety
+  path: https://mysociety.org
+  role: author
+custom:
+  build: constituencies_2025.build:build_postcode_lookup
+  tests: []
+  dataset_order: 0
+  download_options:
+    gate: default
+    survey: default
+    header_text: default
+  formats:
+    csv: true
+    parquet: true
+    gpkg: false
+    geojson: false
+  is_geodata: false
+  composite:
+    xlsx:
+      include: all
+      exclude: none
+      render: false
+    sqlite:
+      include: all
+      exclude: none
+      render: false
+    json:
+      include: all
+      exclude: none
+      render: true
+  change_log:
+    0.1.0: ''
+    0.1.1: ''
+    0.1.2: keywords changed from 'None' to '['UK Local data', 'United Kingdom', 'UK']'

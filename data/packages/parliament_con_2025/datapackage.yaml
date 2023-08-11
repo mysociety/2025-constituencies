@@ -4,7 +4,11 @@ description: "Lookup table and geodata for (currently future) 2025 constituencie
   This merges the geodata from the four boundary commissions and adds a consistent\
   \ set of headings.\nIn advance of a complete ONS ID, we use a unique identifer based\
   \ on Rae and Brown's 3 letter codes (http://www.statsmapsnpix.com/2023/07/a-new-uk-constituency-hex-map.html).\n"
-version: 0.1.1
+version: 0.1.2
+keywords:
+- UK Local data
+- United Kingdom
+- UK
 licenses:
 - name: CC-BY-4.0
   path: https://creativecommons.org/licenses/by/4.0/
@@ -51,7 +55,7 @@ custom:
     sqlite:
       include: all
       exclude: none
-      render: false
+      render: true
     json:
       include: all
       exclude: none
@@ -69,3 +73,4 @@ custom:
       \ {'title': 'Philip Brown and Alasdair Rae, Automatic Knowledge Ltd', 'path':\
       \ 'http://www.statsmapsnpix.com/2023/07/a-new-uk-constituency-hex-map.html',\
       \ 'role': 'contributor'}]'"
+    0.1.2: keywords changed from 'None' to '['UK Local data', 'United Kingdom', 'UK']'
