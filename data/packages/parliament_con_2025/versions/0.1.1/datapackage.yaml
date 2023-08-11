@@ -41,7 +41,7 @@ custom:
     csv: true
     parquet: true
     gpkg: true
-    geojson: true
+    geojson: false
   is_geodata: true
   composite:
     xlsx:

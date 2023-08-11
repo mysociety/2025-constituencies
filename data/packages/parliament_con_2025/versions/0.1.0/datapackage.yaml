@@ -26,7 +26,7 @@ custom:
     csv: true
     parquet: true
     geopackage: true
-    geojson: true
+    geojson: false
   is_geodata: true
   composite:
     xlsx:
