@@ -27,6 +27,20 @@ def test_constituencies_size():
     ), "There should be 18 Northern Irish constituencies"
 
 
+def test_has_gss():
+    df = pd.read_parquet(package_dir / "parl_constituencies_2025.parquet")
+
+    # all items for nations, England, Scotland and Wales should have a gss_code
+
+    nations = ["England", "Scotland", "Wales"]
+
+    for row in df.itertuples():
+        if row.nation in nations:
+            assert (
+                row.gss_code is not None
+            ), f"{row.nation} constituency {row.name} has no gss_code"
+
+
 def test_has_unique_id():
     df = pd.read_parquet(package_dir / "parl_constituencies_2025.parquet")
 
