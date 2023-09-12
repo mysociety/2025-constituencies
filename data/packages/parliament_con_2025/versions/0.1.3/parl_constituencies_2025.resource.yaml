@@ -37,7 +37,7 @@ schema:
     example: Aberhonddu, Maesyfed a Chwm Tawe
   - name: gss_code
     type: string
-    description: "Unique identifier for the constituency - currently England only\n"
+    description: "Unique identifier for the constituency - Currently without NI\n"
     constraints:
       unique: false
     example: E14001063
