@@ -1,0 +1,128 @@
+title: UK Parliamentary Constituencies 2025
+description: "Lookup table and geodata for (future) 2025 constituencies\n"
+custom:
+  row_count: 650
+path: parl_constituencies_2025.parquet
+name: parl_constituencies_2025
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: full_code
+    type: string
+    description: "Unique identifier for the constituency, in the form\nuk.org.mysociety.cons.ukparl.2025.aad\n"
+    constraints:
+      unique: true
+    example: uk.org.mysociety.cons.ukparl.2025.aad
+  - name: short_code
+    type: string
+    description: "Unique identifier for the constituency, in the form\nUKPARL.2025.AAD\n"
+    constraints:
+      unique: true
+    example: UKPARL.2025.AAD
+  - name: name
+    type: string
+    description: "Name of the constituency from the Boundary Commissions\n"
+    constraints:
+      unique: true
+    example: Aberafan Maesteg
+  - name: name_cy
+    type: string
+    description: "Welsh language version of the constituency name (Wales only)\n"
+    constraints:
+      unique: false
+    example: Aberhonddu, Maesyfed a Chwm Tawe
+  - name: gss_code
+    type: string
+    description: "Unique identifier for the constituency\n"
+    constraints:
+      unique: true
+    example: E14001063
+  - name: three_code
+    type: string
+    description: Rae and Brown 3 letter codes (http://www.statsmapsnpix.com/2023/07/a-new-uk-constituency-hex-map.html)
+    constraints:
+      unique: true
+    example: AAD
+  - name: nation
+    type: string
+    description: Nation the constituency is in
+    constraints:
+      unique: false
+      enum:
+      - England
+      - Northern Ireland
+      - Scotland
+      - Wales
+    example: England
+  - name: region
+    type: string
+    description: Region of England (otherwise Nation)
+    constraints:
+      unique: false
+      enum:
+      - East Midlands
+      - Eastern
+      - London
+      - North East
+      - North West
+      - Northern Ireland
+      - Scotland
+      - South East
+      - South West
+      - Wales
+      - West Midlands
+      - Yorkshire and the Humber
+    example: East Midlands
+  - name: con_type
+    type: string
+    description: "Type of constituency 'borough' or 'county'\nScottish 'Burgh' is\
+      \ merged for the purposes of this dataset.\n"
+    constraints:
+      unique: false
+      enum:
+      - borough
+      - county
+    example: borough
+  - name: electorate
+    type: number
+    description: "Number of people registered to vote in the constituency\nin the\
+      \ boundaries when they were created\n"
+    constraints:
+      unique: false
+    example: 21177.0
+  - name: area
+    type: number
+    description: Area in KM2
+    constraints:
+      unique: true
+    example: 6.815573715455851
+  - name: density
+    type: number
+    description: "Number of people per KM2 in the constituency\nin the boundaries\
+      \ when they were created\n"
+    constraints:
+      unique: true
+    example: 6.371942907263824
+  - name: center_lat
+    type: number
+    description: "Latitude of the center of the constituency\n"
+    constraints:
+      unique: true
+    example: 50.10105287196785
+  - name: center_lon
+    type: number
+    description: "Longitude of the center of the constituency\n"
+    constraints:
+      unique: true
+    example: -7.459891964370815
+  - name: geometry
+    type: string
+    description: Boundary information for the constituency
+    constraints:
+      unique: true
+    example: ''
+hash: 7cdbc9797fdc17d762a7737ff6d72088
