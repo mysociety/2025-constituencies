@@ -37,9 +37,9 @@ schema:
     example: Aberhonddu, Maesyfed a Chwm Tawe
   - name: gss_code
     type: string
-    description: "Unique identifier for the constituency - Currently without NI\n"
+    description: "Unique identifier for the constituency\n"
     constraints:
-      unique: false
+      unique: true
     example: E14001063
   - name: three_code
     type: string
@@ -125,4 +125,4 @@ schema:
     constraints:
       unique: true
     example: ''
-hash: 16f55b7f4317f8277dd8e53e8a34dbfb
+hash: 7cdbc9797fdc17d762a7737ff6d72088

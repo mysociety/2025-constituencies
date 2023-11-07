@@ -1,9 +1,11 @@
 name: parliament_con_2025
 title: Parliament Constituencies 2025
-description: "Lookup table and geodata for (currently future) 2025 constituencies.\n\
-  This merges the geodata from the four boundary commissions and adds a consistent\
-  \ set of headings.\nIn advance of a complete ONS ID, we use a unique identifer based\
-  \ on Rae and Brown's 3 letter codes (http://www.statsmapsnpix.com/2023/07/a-new-uk-constituency-hex-map.html).\n"
+description: |
+Lookup table and geodata for (currently future) 2025 constituencies.
+  This merges the geodata from the four boundary commissions and adds a consistent
+  set of headings.\nWe have the GSS codes and also a unique-in-time ID based on
+  on Rae and Brown's 3 letter codes (http://www.statsmapsnpix.com/2023/07/a-new-uk-constituency-hex-map.html).
+  Not all GSS codes have changed from the previous constituencies. 
 version: 0.1.3
 keywords:
 - UK Local data
