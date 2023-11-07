@@ -32,7 +32,7 @@ def test_has_gss():
 
     # all items for nations, England, Scotland and Wales should have a gss_code
 
-    nations = ["England", "Scotland", "Wales"]
+    nations = ["England", "Scotland", "Wales", "Northern Ireland"]
 
     for row in df.itertuples():
         if row.nation in nations:
