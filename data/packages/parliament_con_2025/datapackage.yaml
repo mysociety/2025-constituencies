@@ -1,10 +1,11 @@
 name: parliament_con_2025
-title: Parliament Constituencies 2025
-description: "Lookup table and geodata for (currently future) 2025 constituencies.\n\
-  This merges the geodata from the four boundary commissions and adds a consistent\n\
-  set of headings.\\nWe have the GSS codes and also a unique-in-time ID based on\n\
-  on Rae and Brown's 3 letter codes (http://www.statsmapsnpix.com/2023/07/a-new-uk-constituency-hex-map.html).\n\
-  Not all GSS codes have changed from the previous constituencies. \n"
+title: UK Parliamentary Constituencies 2024-
+description: |
+  Lookup table and geodata for the constituencies that will exist after July 4th 2024.
+  This merges the geodata from the four boundary commissions and adds a consistent set of headings.
+  We have the GSS codes and also a unique-in-time ID based on on [Rae and Brown's 3 letter codes](http://www.statsmapsnpix.com/2023/07/a-new-uk-constituency-hex-map.html).
+  Not all GSS codes have changed from the previous constituencies.
+  Note: 2025 in file names results from the previous uncertainty about the election - where 2025 was the last time it might have been called.
 version: 0.1.4
 keywords:
 - UK Local data
