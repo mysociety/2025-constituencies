@@ -1,9 +1,15 @@
 theme: jekyll-theme-slate
-title: UK Parliament 2025 Constituencies
-description: Conversion and lookup files for 2025 UK Parliamentary constituencies
+title: UK Parliamentary Constituencies
+description: Conversion and lookup files for UK Parliamentary constituencies
 
 baseurl: "/2025-constituencies"
 url: "https://pages.mysociety.org"
+
+navigation:
+  - url: /postcode-converter
+    title: Postcode Converter
+  - url: /
+    title: Data
 
 collections:
   versionlists:
