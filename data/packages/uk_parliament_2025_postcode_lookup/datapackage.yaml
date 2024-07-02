@@ -1,8 +1,8 @@
 name: uk_parliament_2025_postcode_lookup
 title: UK Parliament 2024 postcode lookup
-description: "Lookup from GB postcodes to new 2024 Parliamentary constituency.\nBased on\
-  \ OS Code Point Open - NI postcodes not included because of licencing.\n"
-version: 0.1.2
+description: "Lookup from GB postcodes to new 2024 Parliamentary constituency.\nBased\
+  \ on OS Code Point Open - NI postcodes not included because of licencing.\n"
+version: 0.1.3
 keywords:
 - UK Local data
 - United Kingdom
@@ -46,3 +46,5 @@ custom:
     0.1.0: ''
     0.1.1: ''
     0.1.2: keywords changed from 'None' to '['UK Local data', 'United Kingdom', 'UK']'
+    0.1.3: title changed from 'UK Parliament 2025 postcode lookup' to 'UK Parliament
+      2024 postcode lookup'
