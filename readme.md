@@ -9,4 +9,4 @@ This repository is available online at https://github.com/mysociety/2025-constit
 
 If Github Pages are enabled, the URL is: https://mysociety.github.io/2025-constituencies/
 
-Instructions on using the features of this notebook (data publishing, notebook rendering, Github Pages) are available in [https://github.com/mysociety/data_common/blob/main/data-repo-readme.md](Data Common readme file).
+Instructions on using the features of this notebook (data publishing, notebook rendering, Github Pages) are available in [Data Common readme file](https://github.com/mysociety/data_common/blob/main/data-repo-readme.md).
