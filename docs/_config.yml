@@ -6,8 +6,8 @@ baseurl: "/2025-constituencies"
 url: "https://pages.mysociety.org"
 
 navigation:
-  - url: /postcode-converter
-    title: Postcode Converter
+  - url: /postcode-converters
+    title: Postcode Converters
   - url: /
     title: Data
 
