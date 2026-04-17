@@ -1,0 +1,26 @@
+title: Postcode Lookup
+description: Minimum map between Postcodes and IDs
+custom:
+  row_count: 253517
+path: postcode_lookup_minimal.parquet
+name: postcode_lookup_minimal
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: postcode
+    type: string
+    description: Postcode of the address
+    constraints:
+      unique: true
+    example: AB10 1AB
+  - name: mysoc_id
+    type: string
+    description: Unique identifier for the constituency the postcode falls within
+    constraints:
+      unique: false
+    example: SCOTPARL.CON.2026.ABC
+hash: a952f475bcfa9d7e37fab00d633b825d

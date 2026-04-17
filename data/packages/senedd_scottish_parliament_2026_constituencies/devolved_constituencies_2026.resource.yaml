@@ -1,0 +1,98 @@
+title: Senedd/Scottish Parliament 2026 Constituencies
+description: "IDs and geoparquet for new 2026 Scottish and Welsh constituencies\n"
+custom:
+  row_count: 89
+path: devolved_constituencies_2026.parquet
+name: devolved_constituencies_2026
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: mysoc_id
+    type: string
+    description: Unique identifier for each constituency 
+    constraints:
+      unique: true
+    example: SCOTPARL.CON.2026.ABC
+  - name: gss
+    type: string
+    description: GSS code for constituency
+    constraints:
+      unique: true
+    example: S16000151
+  - name: three_code
+    type: string
+    description: Three letter code for each constituency
+    constraints:
+      unique: true
+    example: ABC
+  - name: name
+    type: string
+    description: Name of the constituency
+    constraints:
+      unique: true
+    example: Aberdeen Central
+  - name: region_name
+    type: string
+    description: (For Scotland) Name of the electoral region
+    constraints:
+      unique: false
+      enum:
+      - Central Scotland and Lothians West
+      - Edinburgh and Lothians East
+      - Glasgow
+      - Highlands and Islands
+      - Mid Scotland and Fife
+      - North East Scotland
+      - South Scotland
+      - West Scotland
+    example: Central Scotland and Lothians West
+  - name: region_code
+    type: string
+    description: (For Scotland) Code for the electoral region
+    constraints:
+      unique: false
+      enum:
+      - SCOTPARL.REG.2026.CSL
+      - SCOTPARL.REG.2026.ELE
+      - SCOTPARL.REG.2026.GLW
+      - SCOTPARL.REG.2026.HAI
+      - SCOTPARL.REG.2026.MSF
+      - SCOTPARL.REG.2026.NES
+      - SCOTPARL.REG.2026.SOS
+      - SCOTPARL.REG.2026.WSC
+    example: SCOTPARL.REG.2026.CSL
+  - name: region_gss
+    type: string
+    description: (For Scotland) GSS code for the electoral region
+    constraints:
+      unique: false
+      enum:
+      - S17000021
+      - S17000022
+      - S17000023
+      - S17000024
+      - S17000025
+      - S17000026
+      - S17000027
+      - S17000028
+    example: S17000021
+  - name: country
+    type: string
+    description: Country of the constituency
+    constraints:
+      unique: false
+      enum:
+      - Scotland
+      - Wales
+    example: Scotland
+  - name: geometry
+    type: string
+    description: Geometry column (empty in non-geo downloads)
+    constraints:
+      unique: true
+    example: ''
+hash: 97c4e6f6bd9248972797c0b257cd0608
