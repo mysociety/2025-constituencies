@@ -1,12 +1,10 @@
 from pathlib import Path
-import pandas as pd
-import geopandas as gpd
-from tqdm import tqdm
-
-from data_common.helpers.typing import ValidationTest, enforce_types
-
 from typing import Annotated
 
+import geopandas as gpd
+import pandas as pd
+from data_common.helpers.typing import ValidationTest, enforce_types
+from tqdm import tqdm
 
 GeoPolygonPath = Annotated[
     Path,

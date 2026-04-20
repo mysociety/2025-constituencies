@@ -1,11 +1,13 @@
-from data_common.management.run_notebook import run_notebook
-from pathlib import Path
-from constituencies_2025.pcon_overlap import (
-    combine_all_overlaps,
-    calculate_pop_crossovers,
-    calculate_area_crossovers,
-)
 import shutil
+from pathlib import Path
+
+from data_common.management.run_notebook import run_notebook
+
+from constituencies_2025.pcon_overlap import (
+    calculate_area_crossovers,
+    calculate_pop_crossovers,
+    combine_all_overlaps,
+)
 
 top_level = Path.cwd()
 while not (top_level / "pyproject.toml").exists():

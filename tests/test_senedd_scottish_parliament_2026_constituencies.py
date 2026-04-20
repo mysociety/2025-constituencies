@@ -1,4 +1,5 @@
 from pathlib import Path
+
 import pandas as pd
 
 top_level = Path.cwd()
@@ -11,9 +12,7 @@ package_dir = (
 
 
 def test_devolved_unique_mysoc_id():
-    df = pd.read_parquet(
-        package_dir / "devolved_constituencies_2026.parquet"
-    )
+    df = pd.read_parquet(package_dir / "devolved_constituencies_2026.parquet")
 
     assert df["mysoc_id"].nunique() == len(df), "mysoc_id is not unique"
 
@@ -21,7 +20,9 @@ def test_devolved_unique_mysoc_id():
 def test_scottish_constituency_count():
     df = pd.read_parquet(package_dir / "devolved_constituencies_2026.parquet")
     scottish = df[df["country"] == "Scotland"]
-    assert len(scottish) == 73, f"Expected 73 Scottish constituencies, got {len(scottish)}"
+    assert len(scottish) == 73, (
+        f"Expected 73 Scottish constituencies, got {len(scottish)}"
+    )
 
 
 def test_scottish_region_count():

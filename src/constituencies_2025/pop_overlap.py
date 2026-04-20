@@ -1,6 +1,7 @@
-from data_common.db.duck import DuckQuery
 from pathlib import Path
+
 import pandas as pd
+from data_common.db.duck import DuckQuery
 
 
 def calculate_population_crossover(area_type_a: str, area_type_b: str) -> pd.DataFrame:

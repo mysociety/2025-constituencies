@@ -1,7 +1,8 @@
-from pathlib import Path
-import pandas as pd
-import geopandas as gpd
 from dataclasses import dataclass, field
+from pathlib import Path
+
+import geopandas as gpd
+import pandas as pd
 from data_common.helpers.parquet import open_geo_file
 
 
