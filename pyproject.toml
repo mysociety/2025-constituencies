@@ -16,6 +16,9 @@ project = 'constituencies_2025.__main__:main'
 notebook = "data_common.notebookcli.__main__:run"
 dataset = "data_common.dataset.__main__:run"
 
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.15.11"
+
 [tool.pyright]
 include = ["src", "notebooks"]
 exclude = ["src/data_common/typings"]
@@ -32,8 +35,8 @@ credit_url = "https://survey.alchemer.com/s3/6876792/Data-usage"
 
 [tool.ruff]
 exclude = []
-select = ["E", "F", "PTH"]
-ignore = ["E501"]
+lint.select = ["E", "F", "PTH"]
+lint.ignore = ["E501"]
 
 [tool.notebook.settings]
 default_page_title = "Settings file defined title"

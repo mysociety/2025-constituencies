@@ -22,9 +22,9 @@ def test_constituencies_size():
     assert counts["England"] == 543, "There should be 543 English constituencies"
     assert counts["Scotland"] == 57, "There should be 57 Scottish constituencies"
     assert counts["Wales"] == 32, "There should be 32 Welsh constituencies"
-    assert (
-        counts["Northern Ireland"] == 18
-    ), "There should be 18 Northern Irish constituencies"
+    assert counts["Northern Ireland"] == 18, (
+        "There should be 18 Northern Irish constituencies"
+    )
 
 
 def test_has_gss():
@@ -36,9 +36,9 @@ def test_has_gss():
 
     for row in df.itertuples():
         if row.nation in nations:
-            assert (
-                row.gss_code is not None
-            ), f"{row.nation} constituency {row.name} has no gss_code"
+            assert row.gss_code is not None, (
+                f"{row.nation} constituency {row.name} has no gss_code"
+            )
 
 
 def test_has_unique_id():
