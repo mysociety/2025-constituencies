@@ -93,32 +93,32 @@ schema:
       \ boundaries when they were created\n"
     constraints:
       unique: false
-    example: 21177.0
+    example: '21177.0'
   - name: area
     type: number
     description: Area in KM2
     constraints:
       unique: true
-    example: 6.815573715455851
+    example: '10.020471217654997'
   - name: density
     type: number
     description: "Number of people per KM2 in the constituency\nin the boundaries\
       \ when they were created\n"
     constraints:
       unique: true
-    example: 6.371942907263824
+    example: '100.07129238064833'
   - name: center_lat
     type: number
     description: "Latitude of the center of the constituency\n"
     constraints:
       unique: true
-    example: 50.10105287196785
+    example: '50.10105287196785'
   - name: center_lon
     type: number
     description: "Longitude of the center of the constituency\n"
     constraints:
       unique: true
-    example: -7.459891964370815
+    example: '-0.0028843506517078465'
   - name: geometry
     type: string
     description: Boundary information for the constituency

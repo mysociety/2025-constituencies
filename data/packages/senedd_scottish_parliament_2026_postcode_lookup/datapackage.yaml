@@ -1,7 +1,7 @@
 name: senedd_scottish_parliament_2026_postcode_lookup
 title: Senedd/Scottish Parliament 2026 postcode lookup
 description: "Postcode lookup for Scotland and Wales to devolved parliament constituencies\n"
-version: 0.1.0
+version: 0.2.0
 licenses:
 - name: CC-BY-4.0
   path: https://creativecommons.org/licenses/by/4.0/
@@ -49,3 +49,4 @@ custom:
       render: true
   change_log:
     0.1.0: Don't need to increment, first version
+    0.2.0: 'Existing resource field(s) type changed: gss'

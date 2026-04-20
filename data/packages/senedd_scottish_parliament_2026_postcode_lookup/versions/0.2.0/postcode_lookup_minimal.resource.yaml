@@ -1,0 +1,26 @@
+title: Postcode Lookup
+description: Minimum map between Postcodes and IDs
+custom:
+  row_count: 253517
+path: postcode_lookup_minimal.parquet
+name: postcode_lookup_minimal
+profile: data-resource
+scheme: file
+format: parquet
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: postcode
+    type: string
+    description: Postcode of the address
+    constraints:
+      unique: true
+    example: AB10 1AB
+  - name: gss
+    type: string
+    description: GSS code for constituency
+    constraints:
+      unique: false
+    example: S16000151
+hash: cf80e6a0a63d6287365330e19e03b976

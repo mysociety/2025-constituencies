@@ -7,7 +7,7 @@ description: "Lookup table and geodata for the constituencies that will exist af
   Not all GSS codes have changed from the previous constituencies.\nNote: 2025 in\
   \ file names results from the previous uncertainty about the election - where 2025\
   \ was the last time it might have been called.\n"
-version: 0.1.5
+version: 0.1.6
 keywords:
 - UK Local data
 - United Kingdom
@@ -80,3 +80,4 @@ custom:
     0.1.3: Add Scottish GSS codes
     0.1.4: 'Minor change in data for resource(s): parl_constituencies_2025'
     0.1.5: Changed 5 Scottish GSS codes after OS update
+    0.1.6: 'parl_constituencies_2025: example changed from 21177.0 to 21177.0'

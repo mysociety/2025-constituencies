@@ -13,7 +13,7 @@ schema:
   fields:
   - name: mysoc_id
     type: string
-    description: Unique identifier for each constituency 
+    description: Unique identifier for each constituency
     constraints:
       unique: true
     example: SCOTPARL.CON.2026.ABC

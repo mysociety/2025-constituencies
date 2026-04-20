@@ -1,7 +1,7 @@
 name: geographic_overlaps
 title: Geographic overlaps
 description: "Tables of area and population overlap between geography types\n"
-version: 0.2.1
+version: 0.2.2
 keywords:
 - UK Local data
 - United Kingdom
@@ -46,3 +46,4 @@ custom:
     0.1.0: ''
     0.2.0: 'New field(s) added to resource: overlap_area,original_area,percentage_overlap_area,percentage_overlap_pop,overlap_pop,original_pop'
     0.2.1: keywords changed from 'None' to '['UK Local data', 'United Kingdom', 'UK']'
+    0.2.2: 'lsoa11_parl25_combo_overlap: example changed from 273.73 to 100001.74'

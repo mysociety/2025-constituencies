@@ -1,0 +1,52 @@
+name: senedd_scottish_parliament_2026_postcode_lookup
+title: Senedd/Scottish Parliament 2026 postcode lookup
+description: "Postcode lookup for Scotland and Wales to devolved parliament constituencies\n"
+version: 0.2.0
+licenses:
+- name: CC-BY-4.0
+  path: https://creativecommons.org/licenses/by/4.0/
+  title: Creative Commons Attribution 4.0 International License
+contributors:
+- title: mySociety
+  path: https://mysociety.org
+  role: author
+- title: Boundaries Scotland
+  path: https://www.boundaries.scot/
+  role: contributor
+- title: Democracy and Boundary Commission Cymru
+  path: https://www.dbcc.gov.wales/
+  role: contributor
+- title: Office for National Statistics
+  path: https://geoportal.statistics.gov.uk/datasets/3be72478d8454b59bb86ba97b4ee325b/about
+  role: contributor
+custom:
+  build:
+  tests:
+  - test_senedd_scottish_parliament_2026_postcode_lookup
+  dataset_order: 0
+  download_options:
+    gate: default
+    survey: default
+    header_text: default
+  formats:
+    csv: true
+    parquet: true
+    gpkg: false
+    geojson: false
+  is_geodata: false
+  composite:
+    xlsx:
+      include: all
+      exclude: none
+      render: true
+    sqlite:
+      include: all
+      exclude: none
+      render: true
+    json:
+      include: all
+      exclude: none
+      render: true
+  change_log:
+    0.1.0: Don't need to increment, first version
+    0.2.0: 'Existing resource field(s) type changed: gss'
